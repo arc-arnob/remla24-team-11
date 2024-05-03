@@ -1,0 +1,33 @@
+stages:
+  prepare:
+    cmd: python src/data/make_dataset.py data/raw data/processed
+    deps:
+    - data/raw/test.txt
+    - data/raw/train.txt
+    - data/raw/val.txt
+    - src/data/make_dataset.py
+    outs:
+    - data/processed
+    - models/char_index.pkl
+  train:
+    cmd: python src/models/train_model.py
+    deps:
+    - data/processed/x_train.npy
+    - data/processed/x_val.npy
+    - data/processed/y_train.npy
+    - data/processed/y_val.npy
+    - models/char_index.pkl
+    - src/models/train_model.py
+    outs:
+    - models/model.keras
+  evaluate:
+    cmd: python src/models/evaluation.py
+    deps:
+    - data/processed/x_test.npy
+    - data/processed/y_test.npy
+    - models/model.keras
+    - src/models/evaluation.py
+    outs:
+    - eval/accuracy.txt
+    - eval/confusion_matrix.csv
+    - eval/classification_report.txt
