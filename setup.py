@@ -5,6 +5,6 @@ setup(
     packages=find_packages(),
     version='0.1.0',
     description='a small project setup',
-    author='arnob',
+    author='team-11',
     license='',
 )

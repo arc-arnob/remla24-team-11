@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "remla24-team-11"
+version = "0.0.0"
+description = "Project of the TU Delft Masters course Release Engineering of Machine Learning Applications by group 11"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "8.1.7"
+keras = "3.3.3"
+numpy = "1.26.4"
+pandas = "2.2.2"
+scikit-learn = "1.4.2"
+setuptools = "68.0.0"
+tensorflow = "2.16.1"
+dvc = "3.5.0"
+python-dotenv = "1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
