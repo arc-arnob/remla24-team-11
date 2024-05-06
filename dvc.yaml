@@ -27,7 +27,20 @@ stages:
     - data/processed/y_test.npy
     - models/model.keras
     - src/models/evaluation.py
-    outs:
-    - eval/accuracy.txt
-    - eval/confusion_matrix.csv
-    - eval/classification_report.txt
+metrics:
+- eval/metrics.json
+plots:
+- eval/plots/sklearn/cm.json:
+    template: confusion
+    x: actual
+    y: predicted
+    title: Confusion Matrix
+    x_label: True Label
+    y_label: Predicted Label
+- eval/plots/sklearn/prc.json:
+    template: simple
+    x: recall
+    y: precision
+    title: Precision-Recall Curve
+    x_label: Recall
+    y_label: Precision

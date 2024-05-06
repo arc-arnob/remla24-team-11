@@ -78,18 +78,5 @@ stages:
       size: 5472435
     - path: src/models/evaluation.py
       hash: md5
-      md5: 072855321de0b1d2bea4793fcd830925
-      size: 1243
-    outs:
-    - path: eval/accuracy.txt
-      hash: md5
-      md5: 206bbcf1cdac11288dadedd3c772b7b5
-      size: 18
-    - path: eval/classification_report.txt
-      hash: md5
-      md5: 33f4cdb8c4b198a210892ff9373a9a88
-      size: 326
-    - path: eval/confusion_matrix.csv
-      hash: md5
-      md5: 3d9cce3cb4342782876833083cc4d170
-      size: 100
+      md5: 56b80423ab4e20c582cab56a81e446bd
+      size: 1480
